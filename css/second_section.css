@@ -1,0 +1,62 @@
+.s2 {
+  background-color: #FFB344;
+  overflow: hidden;
+  height: 100svh;
+}
+
+.about {
+  overflow: hidden;
+  background-color: #FFB344;
+}
+
+.about p {
+  font-size: 5.325rem;
+  margin-top: -45px;
+  color: #F8F7F3;
+  font-family: 'Roboto', sans-serif;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.about p:last-child {
+  display: none;
+}
+
+.s2_image {
+  height: 650px;
+  width: 650px;
+  margin: 0 auto;
+  background-image: url('/assets/freepik_boy.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 600px) {
+.s2 {
+  background-image: url('/assets/freepik_boy.jpg');
+  background-size: cover;
+}
+
+  .s2_image {
+    display: none;
+  }
+
+  .about {
+    background-color: transparent;
+  }
+
+  .about p {
+    font-size: 4rem;
+    margin-top: -32px;
+    text-shadow: 5px 5px black;
+  }
+
+  .about p:last-child {
+    display: block;
+    margin-top: -80px;
+    color: black;
+    margin-left: 10px;
+  }
+}
+

@@ -1,0 +1,249 @@
+.s1 {
+  background-color: #F8F7F3;
+  overflow: hidden;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  margin: 20px 0;
+  justify-content: space-between;
+  border-top: 1px solid #c5c5c5;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+  list-style-type: none;
+}
+.nav ul li a{
+  text-decoration: none;
+  color: black;
+}
+
+.nav ul li a:hover {
+  color: #FFB344;
+  cursor: pointer;
+}
+
+.nav ul li::after {
+  content: "/";
+  margin-left: 20px;
+  color: #c5c5c5;
+}
+
+.nav ul li:last-child::after {
+  content: "";
+}
+
+.header {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  overflow: hidden;
+  gap: 20px;
+  margin-top: 10%;
+}
+
+.content {
+  grid-column: 1 / 7;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 10rem;
+  line-height: 10rem;
+  text-align: right;
+  font-stretch: ultra-expanded;
+  grid-column: 1 / 7;
+}
+
+.title p:last-child {
+  margin-top: -50px;
+}
+
+.content span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.05rem;
+  font-weight: 400;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  text-align: right;
+  grid-column: 3 / 7;
+  font-style: italic;
+  font-weight: 300;
+}
+
+.numbers {
+  display: flex;
+  margin-top: 30px;
+  grid-column: 1 / 7;
+}
+
+.numbers_content p:first-child {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 3rem;
+  line-height: 2.75rem;
+  text-align: right;
+}
+
+.numbers_content p:last-child {
+  font-family: 'Roboto', sans-serif;
+  text-align: right;
+  font-size: 1rem;
+  line-height: 1rem;
+  margin-top: 10px;
+}
+
+.image {
+  grid-column: 7 / 13;
+  background-image: url('/assets/freepik_boy_2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 100px 0 100px 30px;
+  position: relative
+}
+
+.image ul {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  flex-direction: column;
+  list-style-type: none;
+  position: absolute;
+  bottom: 0;
+  background-color: #F8F7F3;
+  padding: 40px 20px;
+  border-radius: 40px 0 40px 20px;
+
+}
+
+.image ul li {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image ul li:hover {
+  cursor: pointer;
+  border: 1px solid #c5c5c5;
+  transition: border 200ms;
+}
+
+.image ul li:first-child {
+  margin-bottom: -5px;
+}
+
+.image ul li:last-child {
+  margin-top: -5px;
+}
+
+.image ul li p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  display: block;
+  height: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    padding: 0;
+  }
+
+  .header {
+    grid-template-columns: 1fr;
+    background-image: linear-gradient(black, black), url('/assets/freepik_boy_2.jpg');
+    background-size: cover;
+    background-blend-mode: saturation;
+    margin-top: 0;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    margin: 0;
+    width: 100vw;
+    background: #F8F7F3;
+    justify-content: end;
+  }
+
+  .nav picture {
+    display: none;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .burguer-menu {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .burguer-menu span {
+    border-radius: 20px;
+    height: 4px;
+    width: 30px;
+    background-color: black;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    grid-column: 1;
+    height: 100svh;
+    position: relative;
+    padding: 0 10px;
+  }
+
+  .content span {
+    color: #F8F7F3;
+    text-decoration: underline dotted #FFB344;
+    text-underline-offset: 3px;
+    font-size: 2rem;
+    line-height: 1.7rem;
+    padding-top: 100px;
+    font-weight: 500;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,1);
+  }
+
+  .title {
+    font-size: 6rem;
+    line-height: 6.5rem;
+    text-align: left;
+    position: relative;
+    top: 0;
+    text-shadow: #FFB344 -2px 2px 1px;
+  }
+
+  .image {
+    display: none;
+  }
+
+  .numbers_content p:first-child {
+    color: #FFB344;
+    text-shadow: 2px 2px 2px #000000;
+  }
+
+  .numbers_content p:last-child {
+    color: #F8F7F3;
+    font-weight: 500;
+  }
+
+}
+
